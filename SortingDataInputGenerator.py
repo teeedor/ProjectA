@@ -3,14 +3,18 @@
 
 import random
 
-Num_of_Input = 100                      #Number of data points to sort
+#createSortingData() FUNCTION
 
-data = open('data_File', 'w')           #open an output file stream
+#input
+#   number of data points you want in the file
+#   the range that the data points are chosen from
+#   the filename of the output file
+def createSortingData(Num_of_data_Points, endValue, filename):
+    data = open(filename+'.txt', 'w')
+    i = 0
+    for i in range(0, Num_of_data_Points):    #loop through the number given in function call
+        r = random.randint(1,endValue+1)           #choose a random number
+        s = str(r)                              #Cast it as a string
+        data.write(s+'\n')                      #Write the data to a file
 
-i = 1
-for i in range(1,Num_of_Input+1):       #Iterate from 1 to the limit set above
-    r = random.randint(1,3001)          #Choose a random int
-    s =str(r)                           #Typcast to String
-    data.write(s+'\n')                  #Write the string with newline
-
-data.close()                            #Make sure to close the file when done with it
+    data.close()                                #Close the File
