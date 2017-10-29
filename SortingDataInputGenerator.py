@@ -6,9 +6,9 @@ import random
 #createSortingData() FUNCTION
 
 #input
-#   number of data points you want in the file
-#   the range that the data points are chosen from
-#   the filename of the output file
+    #number of data points you want in the file
+    #the range that the data points are chosen from
+    #the filename of the output file
 def createSortingData(Num_of_data_Points, endValue, filename):
     data = open(filename+'.txt', 'w')
     i = 0
